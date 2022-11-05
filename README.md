@@ -17,6 +17,17 @@ Neste projeto a nuvem utilizada será a GCP (google cloud plataform), o objetivo
 
  > gcloud compute instances create vm2 --machine-type e2-medium --zone us-east1-c
 
+ A saída deve ser algo como:
+
+    Created [...vm2].
+     NAME: vm2
+     ZONE: us-east1-c
+     MACHINE_TYPE: e2-medium
+     PREEMPTIBLE:
+     INTERNAL_IP: 10.169.0.4 (exemplo)
+     EXTERNAL_IP: 30.156.21.111 (exemplo)
+     STATUS: RUNNING
+
  Utilizando o comando acima, ele criará uma VM nos idêntica a aquela criada no painel
 
    Após a criação da máquina (seja ela feita através do painel ou do cloud shell), na sessão de VMs, vai ter a instância criada, para realizar a instalação do NGINX, clique em SSH (irá inicializar o SSH no próprio navegador).
@@ -51,7 +62,10 @@ A saída esperada é:
     ps auwx | grep nginx
 
 Saída esperada:
-     root      2330  0.0  0.0 159532  1628 ?        Ss   14:06   0:00 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
-     www-data  2331  0.0  0.0 159864  3204 ?        S    14:06   0:00 nginx: worker process
-     www-data  2332  0.0  0.0 159864  3204 ?        S    14:06   0:00 nginx: worker process
-     root      2342  0.0  0.0  12780   988 pts/0    S+   14:07   0:00 grep nginx
+
+    root      2330  0.0  0.0 159532  1628 ?        Ss   14:06   0:00 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
+    www-data  2331  0.0  0.0 159864  3204 ?        S    14:06   0:00 nginx: worker process
+    www-data  2332  0.0  0.0 159864  3204 ?        S    14:06   0:00 nginx: worker process
+    root      2342  0.0  0.0  12780   988 pts/0    S+   14:07   0:00 grep nginx
+
+ Agora basta testar, pegando o IP externo da VM e colocando no navegador, assim que pesquisar, aparecendo a página na web com "Welcome to NGINX!" significa que está tudo certo e já pode ser utilizado!
