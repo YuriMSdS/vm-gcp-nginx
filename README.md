@@ -24,9 +24,24 @@ Neste projeto a nuvem utilizada será a GCP (google cloud plataform), o objetivo
    >uma vez acessado o SSH
       
  >atualize o SO.
+     
     sudo apt-get update
+
  A saída esperada deve ser algo como:
+
      Get:1 http://security.debian.org stretch/updates InRelease [94.3 kB]
     Ign http://deb.debian.org strech InRelease
     Get:2 http://deb.debian.org strech-updates InRelease [91.0 kB]
     ...
+
+>Agora instale o NGINX:
+
+   sudo apt-get install -y nginx
+
+A saída esperada é:
+
+   Reading package lists… Done
+  Building dependency tree
+  Reading state information... Done
+  The following additional packages will be installed:
+  ...
