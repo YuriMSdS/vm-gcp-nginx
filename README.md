@@ -69,3 +69,13 @@ Saída esperada:
     root      2342  0.0  0.0  12780   988 pts/0    S+   14:07   0:00 grep nginx
 
  Agora basta testar, pegando o IP externo da VM e colocando no navegador, assim que pesquisar, aparecendo a página na web com "Welcome to NGINX!" significa que está tudo certo e já pode ser utilizado!
+
+ [Legenda]
+
+>sudo= executa a ação como superusuário (sem restrições)
+
+>ps auwx | grep nginx= ele lista as ações mas somente relacionadas ao nginx
+>tem outras formas de listar focando no nginx, sendo:
+    Ps aux | grep nginx
+    Systemctl status nginx
+    Systemctl status service.nginx   
