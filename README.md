@@ -21,7 +21,7 @@ Neste projeto a nuvem utilizada será a GCP (google cloud plataform), o objetivo
 
    Após a criação da máquina (seja ela feita através do painel ou do cloud shell), na sessão de VMs, vai ter a instância criada, para realizar a instalação do NGINX, clique em SSH (irá inicializar o SSH no próprio navegador).
 
-   >uma vez acessado o SSH
+   uma vez acessado o SSH
       
  >atualize o SO.
      
@@ -36,12 +36,22 @@ Neste projeto a nuvem utilizada será a GCP (google cloud plataform), o objetivo
 
 >Agora instale o NGINX:
 
-   sudo apt-get install -y nginx
+     sudo apt-get install -y nginx
 
 A saída esperada é:
 
-   Reading package lists… Done
-  Building dependency tree
-  Reading state information... Done
-  The following additional packages will be installed:
-  ...
+     Reading package lists… Done
+    Building dependency tree
+    Reading state information... Done
+    The following additional packages will be installed:
+    ...
+
+>Agora Confirme se o NGINX está sendo executado
+
+    ps auwx | grep nginx
+
+Saída esperada:
+     root      2330  0.0  0.0 159532  1628 ?        Ss   14:06   0:00 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
+     www-data  2331  0.0  0.0 159864  3204 ?        S    14:06   0:00 nginx: worker process
+     www-data  2332  0.0  0.0 159864  3204 ?        S    14:06   0:00 nginx: worker process
+     root      2342  0.0  0.0  12780   988 pts/0    S+   14:07   0:00 grep nginx
