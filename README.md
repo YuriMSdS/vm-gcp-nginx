@@ -70,6 +70,9 @@ Saída esperada:
 
  Agora basta testar, pegando o IP externo da VM e colocando no navegador, assim que pesquisar, aparecendo a página na web com "Welcome to NGINX!" significa que está tudo certo e já pode ser utilizado!
 
+
+
+
  [Legenda]
 
 >sudo= executa a ação como superusuário (sem restrições)
