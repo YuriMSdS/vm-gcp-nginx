@@ -75,7 +75,9 @@ Saída esperada:
 >sudo= executa a ação como superusuário (sem restrições)
 
 >ps auwx | grep nginx= ele lista as ações mas somente relacionadas ao nginx
+
 >tem outras formas de listar focando no nginx, sendo:
+
     Ps aux | grep nginx
     Systemctl status nginx
     Systemctl status service.nginx   
